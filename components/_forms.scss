@@ -1,0 +1,105 @@
+// ==========================================
+// Bedrock Forms
+// ==========================================
+
+// Wrapper elements
+fieldset {
+  margin: 1.5rem 0;
+  padding: 10px;
+  border: none;
+  border-top: 2px solid $br_color_ash_light;
+}
+legend {
+  @include font_sans_light;
+  font-size: 1.5rem;
+  color: $br_color_ash_dark;
+  position: relative;
+  left: -10px;
+  background-color: #fff;
+}
+
+// Labels
+label {
+  @include font_sans;;
+  display: inline-block;
+  margin: 1rem 0 .5rem;
+  text-align: left;
+
+  &.inline {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+}
+
+// Text style inputs
+input[type="text"],
+input[type="search"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"] {
+  color: $br_color_ash_dark;
+  border: 1px solid $br_color_ash;
+  display: block;
+  height: 34px;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+// Styled select
+.styled-select {
+  color: $br_color_ash_dark;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 34px;
+  padding: 7px 5px;
+  border: 1px solid $br_color_ash;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &::after {
+    @include font_glyph;
+    content: '\e827';
+    display: block;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    color: #222;
+  }
+
+  select {
+    color: $br_color_ash_dark;
+    display: block;
+    width: calc(100% + 30px);
+    position: relative;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+// Textarea
+textarea {
+  width: 100%;
+  height: 10rem;
+  padding: 10px;
+  color: $br_color_ash_dark;
+  line-height: 1.4rem;
+  resize: none;
+  box-sizing: border-box;
+}
+
+// Checkboxes and Radio Buttons
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0 7px;
+}

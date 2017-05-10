@@ -1,0 +1,182 @@
+// ==========================================
+// Bedrock Elements
+// ==========================================
+
+/**
+ * Core
+ */
+html {
+  @include font_sans;
+  font-size: $br_font_base;
+  color: $br_color_charcoal;
+}
+
+
+/**
+ * Block elements
+ */
+h1 {
+  @include font_sans_light;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  color: $br_color_charcoal_light;
+  letter-spacing: 2px;
+  margin: 3rem 0 2rem;
+
+  .subheader {
+    color: #aaa;
+    font-size: 2rem;
+  }
+}
+h2 {
+  @include font_sans_light;
+  font-size: 1.8rem;
+  color: $br_color_primary;
+  letter-spacing: 1px;
+  margin: 3rem 0 1.5rem;
+
+  .subheader {
+    font-size: 1.7rem;
+    color: #aaa;
+  }
+}
+h3 {
+  @include font_sans_light;
+  font-size: 1.6rem;
+  color: $br_color_charcoal_light;
+  letter-spacing: .5px;
+  margin: 2rem 0 .5rem;
+}
+h4 {
+  @include font_sans;
+  font-size: 1.4rem;
+  color: #888;
+  letter-spacing: .5px;
+  margin: 1.5rem 0 .5rem;
+}
+p {
+  line-height: 1.7rem;
+  margin: 0 0 1.5rem;
+}
+blockquote {
+  @include font_serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  position: relative;
+  margin: 1.5rem 0 1.5rem 20px;
+  padding: 5px 15px;
+  color: $br_color_ash;
+  border-left: 5px solid $br_color_ash_light;
+}
+pre {
+  @include font_mono;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+  display: block;
+  padding: 20px;
+  overflow: auto;
+  background-color: $br_color_ash_light;
+  color: $br_color_charcoal;
+
+  code {
+    background-color: transparent;
+    border: none;
+  }
+}
+figure {
+  margin: 0;
+}
+
+/**
+ * Lists
+ */
+ol, ul {
+  line-height: 1.6rem;
+  padding-left: 40px;
+  margin: 2rem 0;
+}
+ol li {
+  list-style: decimal;
+}
+ul li {
+  list-style: disc;
+}
+
+
+/**
+ * Tables
+ */
+table {
+  margin: 1rem 0;
+  width: 100%;
+  border: none;
+
+  td, th {
+    padding: 10px;
+    vertical-align: top;
+    line-height: 1.5rem;
+  }
+
+  thead, tfoot {
+    td, th {
+      border-bottom: 3px solid $br_color_ash;
+      background-color: $br_color_ash_light;
+      color: $br_color_ash_dark;
+      letter-spacing: 1px;
+      font-size: .85rem;
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: normal;
+      padding: 7px 10px;
+      @include font_sans_light;
+    }
+  }
+  tfoot {
+    td, th { border-bottom: 1px solid $br_color_ash_light; }
+  }
+  tbody {
+    td, th { border-bottom: 1px solid $br_color_ash_light; }
+    th {
+      letter-spacing: 1px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+/**
+ * Inline elements
+ */
+a {
+  color: $br_color_primary;
+}
+code {
+  @include font_mono;
+  font-size: .9rem;
+  line-height: .9rem;
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: $br_color_ash_light;
+  border-radius: 2px;
+  color: $br_color_charcoal_light;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+
+
+/**
+ * Rules and spacing
+ */
+hr {
+  width: 100%;
+  height: 0;
+  border-top: 2px solid $br_color_ash_light;
+  border-bottom: 2px solid $br_color_ash_light;
+  margin: 40px 0;
+}

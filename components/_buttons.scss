@@ -1,0 +1,42 @@
+// ==========================================
+// Bedrock Buttons
+// ==========================================
+.br-button {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $br_color_ash;
+  border: none;
+  color: #fff;
+  font-size: .9rem;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: .5px;
+  line-height: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  margin: 5px 5px 0 0;
+
+  &:hover, &:focus { background-color: $br_color_ash; }
+
+  // Primary color
+  &.color-primary {
+    background-color: $br_color_primary;
+    color: #fff;
+    &:hover, &:focus { background-color: $br_color_primary_dark; }
+  }
+
+  // Red button
+  &.color-secondary {
+    background-color: $br_color_secondary;
+    color: #fff;
+    &:hover, &:focus { background-color: $br_color_secondary_dark; }
+  }
+
+  // Blue button
+  &.color-tertiary {
+    background-color: $br_color_tertiary;
+    color: #fff;
+    &:hover, &:focus { background-color: $br_color_tertiary_light; }
+  }
+}

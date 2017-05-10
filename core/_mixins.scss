@@ -1,0 +1,42 @@
+// ==========================================
+// Mixins
+// ==========================================
+
+/**
+ * Font mixins
+ */
+@mixin font_sans {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font_sans_light {
+  font-family: "Roboto Thin", sans-serif;
+  font-weight: 100;
+}
+
+@mixin font_serif {
+  font-family: "Roboto Slab", serif;
+}
+
+@mixin font_mono {
+  font-family: "Roboto Mono", monospace;
+}
+
+// This is generally unnecessary as the "icon-*" classes should be used instead
+// This mixin can be used to change the font for pseudo elements like ::after
+@mixin font_glyph {
+  font-family: "fontello";
+}
+
+
+/**
+ * Clearfix
+ */
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

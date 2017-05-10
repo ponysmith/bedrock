@@ -1,0 +1,24 @@
+// ==========================================
+// Bedrock Images
+// ==========================================
+
+img {
+
+  border: none;
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  &.rounded {
+    border-radius: 10px;
+  }
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.border {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+
+}
