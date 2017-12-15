@@ -1,0 +1,16 @@
+ol, ul {
+  line-height: 1.8rem;
+  padding-left: 40px;
+  margin: 2rem 0;
+
+  ol, ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+}
+ol li {
+  list-style: decimal;
+}
+ul li {
+  list-style: disc;
+}

@@ -1,0 +1,12 @@
+hr {
+  width: 100%;
+  height: 0;
+  border: none;
+  border-top: 2px solid $br_color_ash;
+  margin: 40px 0;
+
+  &.br-color-primary { border-top-color: $br_color_primary_light; }
+  &.br-color-secondary { border-top-color: $br_color_secondary_light; }
+
+  &.br-dashed { border-top-style: dashed; }
+}

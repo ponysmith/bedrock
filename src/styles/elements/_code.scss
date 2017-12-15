@@ -1,0 +1,11 @@
+code {
+  @include font_mono;
+  font-size: .9rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 2px 4px;
+  background-color: $br_color_ash_light;
+  border-radius: 1px;
+  color: $br_color_charcoal_light;
+}

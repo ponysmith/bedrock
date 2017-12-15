@@ -1,0 +1,38 @@
+.br-button {
+  @include font_sans_light;
+  border-radius: 3px;
+  display: inline-block;
+  padding: .8rem 1.3rem;
+  box-sizing: border-box;
+  background-color: $br_color_ash;
+  border: none;
+  color: #fff;
+  font-size: .9rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+
+  &:hover, &:focus {
+    background-color: $br_color_ash;
+  }
+
+  &.br-color-primary {
+    background-color: $br_color_primary;
+    color: #fff;
+    &:hover, &:focus {
+      background-color: $br_color_primary_dark;
+    }
+  }
+
+  &.br-color-secondary {
+    background-color: $br_color_secondary;
+    color: #fff;
+    &:hover, &:focus {
+      background-color: $br_color_secondary_dark;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+label {
+  @include font_sans;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  color: $br_color_primary_dark;
+  font-style: italic;;
+
+  &.inline {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+}

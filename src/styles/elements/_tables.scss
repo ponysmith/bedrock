@@ -1,0 +1,37 @@
+table {
+  margin: 1rem 0;
+  width: 100%;
+  border: none;
+
+  td, th {
+    padding: 10px;
+    vertical-align: top;
+    line-height: 1.5rem;
+  }
+
+  thead, tfoot {
+    td, th {
+      border-bottom: 3px solid $br_color_ash;
+      background-color: $br_color_ash_light;
+      color: $br_color_charcoal_light;
+      letter-spacing: 1px;
+      font-size: .9rem;
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: normal;
+      padding: 7px 10px;
+      @include font_sans;
+    }
+  }
+  tfoot {
+    td, th { border-bottom: 1px solid $br_color_ash_light; }
+  }
+  tbody {
+    td, th { border-bottom: 1px solid $br_color_ash_light; }
+    th {
+      letter-spacing: 1px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,27 +1,24 @@
-// ==========================================
-// Bedrock Grid
-// ==========================================
-
-// Row container
-.br-row {
+.br-row,
+.br-row-nopad {
   display: block;
   margin: 0 0 10px 0;
   @include clearfix;
 
-  // Column classes
   [class^="br-col"] {
     width: 100%;
     margin-left: 0;
     box-sizing: border-box;
   }
 }
+.br-row-nopad {
+  margin: 0;
+}
 
-
-/**
- * Enable the grid above the mobile breakpoint
- */
 @media only screen and (min-width: $br_width_mobile) {
-  .br-row {
+
+  .br-row,
+  .br-row-nopad {
+
     [class^="br-col"] {
       display: block;
       float: left;
@@ -39,17 +36,18 @@
         width: percentage((($i * $br_grid_single_column_width) + (($i - 1) * $br_grid_gutter)) / 100);
       }
     }
+  }
 
-    // Column widths without gutters
-    &.nopad {
-      [class^="br-col"] {
-        margin-left: 0;
-      }
-      @for $i from 1 through $br_grid_columns {
-        .br-col-#{$i} {
-          width: percentage(($i * $br_grid_single_column_width_nogutter) / 100);
-        }
+  // Column widths without gutters
+  .br-row-nopad {
+    [class^="br-col"] {
+      margin-left: 0;
+    }
+    @for $i from 1 through $br_grid_columns {
+      .br-col-#{$i} {
+        width: percentage(($i * $br_grid_single_column_width_nogutter) / 100);
       }
     }
   }
+
 }

@@ -1,0 +1,6 @@
+html {
+  @include font_sans;
+  background-color: #fff;
+  font-size: $br_font_base;
+  color: $br_color_charcoal;
+}

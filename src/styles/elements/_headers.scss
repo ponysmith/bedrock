@@ -1,0 +1,56 @@
+h1 {
+  @include font_sans_light;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $br_color_primary_dark;
+  letter-spacing: 2px;
+  margin: 3rem 0 2rem;
+
+  .br-subheader {
+    color: $br_color_ash_dark;
+    font-style: italic;
+    font-size: 1.8rem;
+  }
+}
+h2 {
+  @include font_sans_light;
+  font-size: 1.7rem;
+  color: $br_color_secondary_dark;
+  letter-spacing: 1px;
+  margin: 3rem 0 1.5rem;
+
+  .br-subheader {
+    color: $br_color_ash_dark;
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+}
+h3 {
+   @include font_sans_light;
+   font-size: 1.5rem;
+   color: $br_color_ash_dark;
+   letter-spacing: .5px;
+   margin: 2rem 0 .5rem;
+}
+h4 {
+   @include font_sans;
+   font-size: 1.2rem;
+   color: $br_color_ash_dark;
+   letter-spacing: .5px;
+   margin: 1.5rem 0 .5rem;
+}
+h5 {
+   @include font_sans;
+   font-size: .9rem;
+   font-style: italic;
+   color: $br_color_ash_dark;
+   letter-spacing: .5px;
+   margin: 1.5rem 0 .5rem;
+}
+h6 {
+   @include font_sans;
+   font-size: .9rem;
+   color: $br_color_ash_dark;
+   letter-spacing: .5px;
+   margin: 1.5rem 0 .5rem;
+}

@@ -1,0 +1,11 @@
+pre {
+  @include font_mono;
+  font-size: .9rem;
+  line-height: 1.6rem;
+  margin: 1.5rem 0;
+  display: block;
+  padding: 20px;
+  overflow: auto;
+  background-color: $br_color_ash_light;
+  color: $br_color_charcoal;
+}

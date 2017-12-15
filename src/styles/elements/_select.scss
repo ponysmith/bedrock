@@ -1,0 +1,31 @@
+.styled-select {
+  color: $br_color_ash_dark;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 34px;
+  padding: 7px 5px;
+  border: 1px solid $br_color_ash;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &::after {
+    @include font_glyph;
+    content: '\e827';
+    display: block;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    color: #222;
+  }
+
+  select {
+    color: $br_color_ash_dark;
+    display: block;
+    width: calc(100% + 30px);
+    position: relative;
+    border: 0;
+    background-color: transparent;
+  }
+}

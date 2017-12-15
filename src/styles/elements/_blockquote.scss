@@ -1,0 +1,20 @@
+blockquote {
+  @include font_serif;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  position: relative;
+  margin: 1.5rem 0 1.5rem 20px;
+  padding: 5px 15px;
+  color: $br_color_ash_dark;
+  border-left: 5px solid $br_color_ash_light;
+
+  &.br-color-primary {
+    border-left-color: $br_color_primary_light;
+    color: $br_color_primary;
+  }
+
+  &.br-color-secondary {
+    border-left-color: $br_color_secondary_light;
+    color: $br_color_secondary;
+  }
+}

@@ -1,0 +1,16 @@
+.br-container,
+.br-container-padded,
+.br-container-full,
+.br-container-full-padded {
+  width: 100%;
+  box-sizing: border-box;
+}
+.br-container,
+.br-container-padded {
+  max-width: $br_width_fixed;
+  margin: 0 auto;
+}
+.br-container-padded,
+.br-container-full-padded {
+  padding: $br_container_pad_top $br_container_pad_right $br_container_pad_bottom $br_container_pad_left;
+}
