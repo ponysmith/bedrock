@@ -30,6 +30,16 @@ config['root'] = __dirname;
 
 
 /**
+ * Ensure there is an overrides file
+ * If no overrides file exists, SASS compilation will throw an error
+ * If no file is present, copy the overrides.scss.sample to create one
+ */
+if(!fs.existsSync(config['root'] + '/src/overrides.scss')) {
+  gutil.log(gutil.colors.yellow('No overrides file found: creating from overrides.scss.sample'));
+  fs.copyFileSync(config['root'] + '/src/overrides.scss.sample', config['root'] + '/src//overrides.scss', { overwrite: false });
+}
+
+/**
  * Load tasks
  */
 function loadTask(task) {
