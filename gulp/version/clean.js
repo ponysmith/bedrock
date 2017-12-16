@@ -12,8 +12,8 @@ var del = require('del');
 module.exports = function(gulp, config) {
 	return function(done) {
     gutil.log(gutil.colors.yellow('Cleaning temporary version files'));
-    var dest = path.resolve(config.root, config.css_dest);
-    del([dest + '/*.tmp.version'])
+    var f = path.resolve(config.root, '/*.tmp.version');
+    del(f)
       .then(function(paths) {
         paths.forEach(function(p, i, a) {
           gutil.log(gutil.colors.green('Deleted: ' + p));
