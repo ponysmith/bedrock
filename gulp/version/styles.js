@@ -17,7 +17,7 @@ module.exports = function(gulp, config) {
     var file_normal = path.resolve(dir, config.css_basename) + '.css';
     var file_minified = path.resolve(dir, config.css_basename) + '.min.css';
     var file_version_tmp = path.resolve(dir, config.css_basename) + '.tmp.version';
-    var sha1 = checksum(file_minified).substr(0,10);
+    var sha1 = checksum(file_minified).substr(0, config.css_version_hash_length);
     fs.copyFileSync(file_minified, path.resolve(dir, config.css_basename) + '-' + sha1 + '.min.css');
     fs.writeFileSync(file_version_tmp, config.css_basename + '|' + sha1);
 

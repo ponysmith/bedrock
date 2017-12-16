@@ -5,3 +5,4 @@
 
 css_dest: dist
 css_basename: bedrock
+css_version_hash_length: 10
