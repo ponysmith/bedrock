@@ -7,7 +7,6 @@
 var gutil = require('gulp-util');
 var path = require('path');
 var cat = require('gulp-concat');
-var del = require('del');
 
 module.exports = function(gulp, config) {
 	return function(done) {
@@ -16,6 +15,7 @@ module.exports = function(gulp, config) {
     gulp.src(d + '/*.tmp.version')
       .pipe(cat('.version'))
       .pipe(gulp.dest(config.css_dest));
+
     // Hacky, but couldn't get the concat task to wait for the version tasks to complete
     setTimeout(function() {
       done();

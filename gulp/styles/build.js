@@ -12,37 +12,19 @@ var path = require('path');
 module.exports = function(gulp, config) {
 	return function(done) {
     var d = path.resolve(config.root, config.css_dest);
+    var f = path.resolve(config.root, 'src/bedrock.scss');
     gutil.log(gutil.colors.yellow('Compiling SASS files to ' + d));
 
-    // var src = [];
-    // config.css_builds.forEach(function(b, i) {
-    //   src.push(path.resolve(config.root, b.source));
-    // });
+    gulp.src(f)
+      .pipe(sass())
+      .pipe(rename(function(p) { p.extname = '.css', p.basename = config.css_basename }))
+      .pipe(gulp.dest(d));
+    gulp.src(f)
+      .pipe(sass({ outputStyle: 'compressed' }))
+      .pipe(rename(function(p) { p.extname = '.min.css', p.basename = config.css_basename }))
+      .pipe(gulp.dest(d));
 
-    config.css_builds.forEach(function(b, i) {
-      var f = path.resolve(config.root, b.source);
-      gulp.src(f)
-        .pipe(sass())
-        .pipe(rename(function(p) { p.extname = '.css', p.basename = b.basename }))
-        .pipe(gulp.dest(d));
-      gulp.src(f)
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(rename(function(p) { p.extname = '.min.css', p.basename = b.basename }))
-        .pipe(gulp.dest(d));
-    });
-
-
-    // gulp.src(src.toString())
-    //   .pipe(sass())
-    //   .pipe(rename(function(p) { p.extname = '.css', p.basename = 'bedrock' }))
-    //   .pipe(gulp.dest(d));
-    //
-    // gulp.src(src.toString())
-    //   .pipe(sass({ outputStyle: 'compressed' }))
-    //   .pipe(rename(function(p) { p.extname = '.min.css', p.basename = 'bedrock' }))
-    //   .pipe(gulp.dest(d));
-
-    // Allow some time for the files to write
+    // Hacky, but couldn't get the concat task to wait for files to write
     setTimeout(function() {
       done();
     }, 200);

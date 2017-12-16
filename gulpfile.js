@@ -9,7 +9,6 @@
 /**
  * Import modules
  */
-// var fs = require('fs-extra');
 var fs = require('fs');
 var yaml = require('node-yaml');
 var gulp = require('gulp');

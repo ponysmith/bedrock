@@ -4,5 +4,4 @@
 #
 
 css_dest: dist
-css_builds:
-  - { source: src/styles.scss, basename: bedrock }
+css_basename: bedrock
