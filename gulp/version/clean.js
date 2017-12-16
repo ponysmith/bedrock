@@ -6,7 +6,6 @@
 
 var gutil = require('gulp-util');
 var path = require('path');
-var del = require('del');
 var fs = require('fs');
 
 module.exports = function(gulp, config) {
