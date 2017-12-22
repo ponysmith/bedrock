@@ -7,5 +7,6 @@
 
 @import 'overrides';
 
-@import 'common/vars/main';
-@import 'common/mixins/main';
+@import 'common/vars';
+@import 'common/mixins/fonts';
+@import 'common/mixins/animate/spin';

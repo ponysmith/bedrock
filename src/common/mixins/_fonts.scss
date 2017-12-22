@@ -1,7 +1,3 @@
-// ==========================================
-// Mixins
-// ==========================================
-
 /**
  * Font mixins
  */
@@ -26,7 +22,7 @@
 // This is generally unnecessary as the "br-icon-*" classes should be used instead
 // This mixin can be used to change the font for pseudo elements like ::after
 @mixin font_glyph {
-  font-family: "fontello";
+  font-family: $br_font_glyph;
 }
 
 /**
