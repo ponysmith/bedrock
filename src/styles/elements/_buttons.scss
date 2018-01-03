@@ -1,13 +1,13 @@
 .br-button {
-  @include font_sans_light;
+  @include font_sans;
   border-radius: 3px;
   display: inline-block;
-  padding: .8rem 1.3rem;
+  padding: .7rem 1.3rem;
   box-sizing: border-box;
-  background-color: $br_color_ash;
+  background-color: $br_color_ash_light;
   border: none;
-  color: #fff;
-  font-size: .9rem;
+  color: $br_color_charcoal_light;
+  font-size: .8rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -17,22 +17,25 @@
   outline: none;
 
   &:hover, &:focus {
-    background-color: $br_color_ash;
+    background-color: $br_color_charcoal_light;
+    color: $br_color_ash_light;
   }
 
   &.br-color-primary {
-    background-color: $br_color_primary;
-    color: #fff;
+    background-color: $br_color_primary_light;
+    color: $br_color_primary_dark;
     &:hover, &:focus {
       background-color: $br_color_primary_dark;
+      color: $br_color_primary_light;
     }
   }
 
   &.br-color-secondary {
-    background-color: $br_color_secondary;
-    color: #fff;
+    background-color: $br_color_secondary_light;
+    color: $br_color_secondary_dark;
     &:hover, &:focus {
       background-color: $br_color_secondary_dark;
+      color: $br_color_secondary_light;
     }
   }
 }

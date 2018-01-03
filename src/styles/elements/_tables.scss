@@ -23,9 +23,6 @@ table {
       @include font_sans;
     }
   }
-  tfoot {
-    td, th { border-bottom: 1px solid $br_color_ash_light; }
-  }
   tbody {
     td, th { border-bottom: 1px solid $br_color_ash_light; }
     th {
@@ -33,5 +30,31 @@ table {
       text-align: left;
       text-transform: uppercase;
     }
+  }
+}
+
+table.br-theme-primary {
+  thead, tfoot {
+    td, th {
+      border-bottom: 3px solid $br_color_primary;
+      background-color: $br_color_primary_light;
+      color: $br_color_primary_dark;
+    }
+  }
+  tbody {
+    td, th { border-bottom: 1px solid $br_color_primary_light; }
+  }
+}
+
+table.br-theme-secondary {
+  thead, tfoot {
+    td, th {
+      border-bottom: 3px solid $br_color_secondary;
+      background-color: $br_color_secondary_light;
+      color: $br_color_secondary_dark;
+    }
+  }
+  tbody {
+    td, th { border-bottom: 1px solid $br_color_secondary_light; }
   }
 }

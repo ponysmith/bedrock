@@ -1,47 +1,26 @@
-.br-row,
-.br-row-nopad {
+.br-row {
   display: block;
-  margin: 0 0 10px 0;
-  @include clearfix;
+  font-size: 0;
 
   [class^="br-col"] {
+    display: block;
+    font-size: 1rem;
     width: 100%;
     margin-left: 0;
     box-sizing: border-box;
   }
 }
-.br-row-nopad {
-  margin: 0;
+
+.br-row.br-padded {
+  margin: 0 0 1rem;
 }
+
 
 @media only screen and (min-width: $br_width_mobile) {
 
-  .br-row,
-  .br-row-nopad {
-
+  .br-row {
     [class^="br-col"] {
-      display: block;
-      float: left;
-      margin-left: percentage($br_grid_gutter/100);
-    }
-
-    // First column
-    [class^="br-col"]:first-child {
-      margin-left: 0;
-    }
-
-    // Column widths with gutters
-    @for $i from 1 through $br_grid_columns {
-      .br-col-#{$i} {
-        width: percentage((($i * $br_grid_single_column_width) + (($i - 1) * $br_grid_gutter)) / 100);
-      }
-    }
-  }
-
-  // Column widths without gutters
-  .br-row-nopad {
-    [class^="br-col"] {
-      margin-left: 0;
+      display: inline-block;
     }
     @for $i from 1 through $br_grid_columns {
       .br-col-#{$i} {
@@ -50,4 +29,19 @@
     }
   }
 
+  .br-row.br-padded {
+    margin-bottom: 1rem;
+
+    [class^="br-col"] {
+      margin-left: percentage($br_grid_gutter/100);
+    }
+    [class^="br-col"]:first-child {
+      margin-left: 0;
+    }
+    @for $i from 1 through $br_grid_columns {
+      .br-col-#{$i} {
+        width: percentage((($i * $br_grid_single_column_width) + (($i - 1) * $br_grid_gutter)) / 100);
+      }
+    }
+  }
 }

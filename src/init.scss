@@ -5,8 +5,11 @@
 // Additionally, any external stylesheets configured for compilation in the Bedrock config can import this file to gain all the variables
 //
 
+// Custom var overrides
 @import 'overrides';
-
+// Default vars
 @import 'common/vars';
+// Mixins
+@import 'common/mixins/clearfix';
 @import 'common/mixins/fonts';
 @import 'common/mixins/animate/spin';

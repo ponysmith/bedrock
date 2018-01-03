@@ -1,3 +1,6 @@
+$br_bgcolor_code: transparent !default;
+$br_color_code: $br_color_charcoal_light !default;
+
 code {
   @include font_mono;
   font-size: .9rem;
@@ -5,7 +8,7 @@ code {
   display: inline-block;
   vertical-align: baseline;
   padding: 2px 4px;
-  background-color: $br_color_ash_light;
+  background-color: $br_bgcolor_code;
   border-radius: 1px;
-  color: $br_color_charcoal_light;
+  color: $br_color_code;
 }

@@ -30,7 +30,6 @@ $br_container_pad_right: 10px !default;
 $br_container_pad_bottom: 10px !default;
 $br_container_pad_left: 10px !default;
 
-
 /**
  * Grid
  */
@@ -38,7 +37,6 @@ $br_grid_columns: 12 !default;
 $br_grid_gutter: 2 !default; // this refers to a percentage value i.e. 2 = 2% gutter width
 $br_grid_single_column_width: (100 - ($br_grid_columns - 1) * $br_grid_gutter) / $br_grid_columns;
 $br_grid_single_column_width_nogutter: 100 / $br_grid_columns;
-
 
 /**
  * Colors
@@ -53,9 +51,18 @@ $br_color_charcoal_dark: #222222 !default;
 $br_color_charcoal_light: #666666 !default;
 // Primary
 $br_color_primary: #3795FF !default;
-$br_color_primary_light: lighten($br_color_primary, 15%) !default;
+$br_color_primary_light: lighten($br_color_primary, 25%) !default;
 $br_color_primary_dark: darken($br_color_primary, 15%) !default;
 // Secondary
 $br_color_secondary: #A9DD50 !default;
-$br_color_secondary_light: lighten($br_color_secondary, 15%) !default;
+$br_color_secondary_light: lighten($br_color_secondary, 25%) !default;
 $br_color_secondary_dark: darken($br_color_secondary, 15%) !default;
+// Info
+$br_color_info: #f7dd6d !default;
+$br_color_info_light: lighten($br_color_info, 25%) !default;
+$br_color_info_dark: darken($br_color_info, 15%) !default;
+// Warn
+$br_color_warn: #e67474 !default;
+$br_color_warn_light: lighten($br_color_warn, 25%) !default;
+$br_color_warn_dark: darken($br_color_warn, 15%) !default;
+

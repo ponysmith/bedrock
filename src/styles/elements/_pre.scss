@@ -1,3 +1,6 @@
+$br_bgcolor_pre: transparent !default;
+$br_color_pre: $br_color_charcoal_light !default;
+
 pre {
   @include font_mono;
   font-size: .9rem;
@@ -6,6 +9,6 @@ pre {
   display: block;
   padding: 20px;
   overflow: auto;
-  background-color: $br_color_ash_light;
-  color: $br_color_charcoal;
+  background-color: $br_bgcolor_pre;
+  color: $br_color_pre;
 }

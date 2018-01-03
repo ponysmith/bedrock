@@ -1,16 +1,13 @@
-.br-container,
-.br-container-padded,
-.br-container-full,
-.br-container-full-padded {
+.br-container-fixed,
+.br-container-full {
   width: 100%;
   box-sizing: border-box;
+
+  &.br-padded {
+    padding: $br_container_pad_top $br_container_pad_right $br_container_pad_bottom $br_container_pad_left;
+  }
 }
-.br-container,
-.br-container-padded {
+.br-container-fixed {
   max-width: $br_width_fixed;
   margin: 0 auto;
-}
-.br-container-padded,
-.br-container-full-padded {
-  padding: $br_container_pad_top $br_container_pad_right $br_container_pad_bottom $br_container_pad_left;
 }
