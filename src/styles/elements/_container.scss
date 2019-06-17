@@ -2,10 +2,6 @@
 .br-container-full {
   width: 100%;
   box-sizing: border-box;
-
-  &.br-padded {
-    padding: $br_container_pad_top $br_container_pad_right $br_container_pad_bottom $br_container_pad_left;
-  }
 }
 .br-container-fixed {
   max-width: $br_width_fixed;

@@ -1,6 +1,7 @@
 .br-row {
   display: block;
   font-size: 0;
+  align-items: stretch;
 
   [class^="br-col"] {
     display: block;
@@ -19,12 +20,13 @@
 @media only screen and (min-width: $br_width_mobile) {
 
   .br-row {
+    display: flex;
     [class^="br-col"] {
       display: inline-block;
     }
     @for $i from 1 through $br_grid_columns {
       .br-col-#{$i} {
-        width: percentage(($i * $br_grid_single_column_width_nogutter) / 100);
+        flex: 0 0 percentage(($i * $br_grid_single_column_width_nogutter) / 100); 
       }
     }
   }
@@ -40,7 +42,7 @@
     }
     @for $i from 1 through $br_grid_columns {
       .br-col-#{$i} {
-        width: percentage((($i * $br_grid_single_column_width) + (($i - 1) * $br_grid_gutter)) / 100);
+        flex: percentage((($i * $br_grid_single_column_width) + (($i - 1) * $br_grid_gutter)) / 100);
       }
     }
   }

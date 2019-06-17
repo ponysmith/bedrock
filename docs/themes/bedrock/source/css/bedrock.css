@@ -6,91 +6,30 @@
  * If you would like to make changes to Bedrock or add functionality
  * consult the docs for how to make changes / additions
  */
-/**
- * Dimensions
- */
-/**
- * Fonts
- */
-/**
- * Containers
- */
-/**
- * Grid
- */
-/**
- * Colors
- */
+:root {
+  --br-font-basesize: 14px;
+  --br-color-ash: #cccccc;
+  --br-color-ash-light: #efefef;
+  --br-color-ash-dark: #999999;
+  --br-color-charcoal: #555;
+  --br-color-charcoal-light: #777;
+  --br-color-charcoal-dark: #333;
+  --br-color-primary: #3795FF;
+  --br-color-primary-dark: #0056b7;
+  --br-color-primary-light: #b7d9ff;
+  --br-color-secondary: #A9DD50;
+  --br-color-secondary-dark: #66911c;
+  --br-color-secondary-light: #ddf2bb;
+  --br-color-info: #f7dd6d;
+  --br-color-info-light: #fef9e6;
+  --br-color-info-dark: #d9b20c;
+  --br-color-warn: #e67474;
+  --br-color-warn-light: #f9e0e0;
+  --br-color-warn-dark: #b92121; }
+
 /**
  * Font mixins
  */
-.br-animate-spin {
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-  display: inline-block; }
-
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@-webkit-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@-o-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@-ms-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
-@keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
-
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -459,7 +398,7 @@ blockquote {
   position: relative;
   margin: 1.5rem 0;
   padding: 5px 10px 5px 40px;
-  color: #999999; }
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark)); }
   blockquote::before {
     font-family: "Font Awesome 5 Pro";
     content: "\f10d";
@@ -470,9 +409,9 @@ blockquote {
     left: 5px;
     font-size: 1.5rem; }
   blockquote.br-theme-primary {
-    color: #3795FF; }
+    color: var(--bro-color-primary, var(--br-color-primary)); }
   blockquote.br-theme-secondary {
-    color: #A9DD50; }
+    color: var(--bro-color-secondary, var(--br-color-secondary)); }
 
 body {
   background-color: #fff; }
@@ -487,9 +426,9 @@ b, strong {
   display: inline-block;
   padding: .7rem 1.3rem;
   box-sizing: border-box;
-  background-color: #efefef;
+  background-color: var(--bro-color-ash-light, var(--br-color-ash-light));
   border: none;
-  color: #777;
+  color: var(--bro-color-charcoal-light, var(--br-color-charcoal-light));
   font-size: .8rem;
   text-align: center;
   text-decoration: none;
@@ -499,20 +438,20 @@ b, strong {
   cursor: pointer;
   outline: none; }
   .br-button:hover, .br-button:focus {
-    background-color: #777;
-    color: #efefef; }
+    background-color: var(--bro-color-charcoal-light, var(--br-color-charcoal-light));
+    color: var(--bro-color-ash-light, var(--br-color-ash-light)); }
   .br-button.br-color-primary {
-    background-color: #b7d9ff;
-    color: #0056b7; }
+    background-color: var(--bro-color-primary-light, var(--br-color-primary-light));
+    color: var(--bro-color-primary-dark, var(--br-color-primary-dark)); }
     .br-button.br-color-primary:hover, .br-button.br-color-primary:focus {
-      background-color: #0056b7;
-      color: #b7d9ff; }
+      background-color: var(--bro-color-primary-dark, var(--br-color-primary-dark));
+      color: var(--bro-color-primary-light, var(--br-color-primary-light)); }
   .br-button.br-color-secondary {
-    background-color: #ddf2bb;
-    color: #66911c; }
+    background-color: var(--bro-color-secondary-light, var(--br-color-secondary-light));
+    color: var(--bro-color-secondary-dark, var(--br-color-secondary-dark)); }
     .br-button.br-color-secondary:hover, .br-button.br-color-secondary:focus {
-      background-color: #66911c;
-      color: #ddf2bb; }
+      background-color: var(--bro-color-secondary-dark, var(--br-color-secondary-dark));
+      color: var(--bro-color-secondary-light, var(--br-color-secondary-light)); }
 
 code {
   font-family: "Roboto Mono", monospace;
@@ -523,7 +462,7 @@ code {
   padding: 2px 4px;
   background-color: transparent;
   border-radius: 1px;
-  color: #777; }
+  color: var(--bro-color-charcoal-light, var(--br-color-charcoal-light)); }
 
 .br-container-fixed,
 .br-container-full {
@@ -538,7 +477,7 @@ fieldset {
   margin: 1.5rem 0;
   padding: 10px;
   border: none;
-  border-top: 2px solid #efefef; }
+  border-top: 2px solid var(--bro-color-ash-light, var(--br-color-ash-light)); }
 
 .br-row {
   display: block;
@@ -619,11 +558,11 @@ h1 {
   font-weight: 100;
   font-size: 2rem;
   text-transform: uppercase;
-  color: #0056b7;
+  color: var(--bro-color-primary-dark, var(--br-color-primary-dark));
   letter-spacing: 2px;
   margin: 3rem 0 2rem; }
   h1 .br-subheader {
-    color: #999999;
+    color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
     font-style: italic;
     font-size: 1.8rem; }
 
@@ -631,11 +570,11 @@ h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 1.8rem;
-  color: #66911c;
+  color: var(--bro-color-secondary-dark, var(--br-color-secondary-dark));
   letter-spacing: 1px;
   margin: 3rem 0 1.5rem; }
   h2 .br-subheader {
-    color: #999999;
+    color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
     font-style: italic;
     font-size: 1.5rem; }
 
@@ -643,7 +582,7 @@ h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 1.5rem;
-  color: #999999;
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
   letter-spacing: .5px;
   margin: 2rem 0 .5rem; }
 
@@ -651,7 +590,7 @@ h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
-  color: #999999;
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
   letter-spacing: .5px;
   margin: 1.5rem 0 .5rem; }
 
@@ -660,7 +599,7 @@ h5 {
   font-weight: 400;
   font-size: .9rem;
   font-style: italic;
-  color: #999999;
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
   letter-spacing: .5px;
   margin: 1.5rem 0 .5rem; }
 
@@ -668,7 +607,7 @@ h6 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: .9rem;
-  color: #999999;
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
   letter-spacing: .5px;
   margin: 1.5rem 0 .5rem; }
 
@@ -676,12 +615,12 @@ hr {
   width: 100%;
   height: 0;
   border: none;
-  border-top: 2px solid #cccccc;
+  border-top: 2px solid var(--bro-color-ash, var(--br-color-ash));
   margin: 40px 0; }
   hr.br-color-primary {
-    border-top-color: #b7d9ff; }
+    border-top-color: var(--bro-color-primary-light, var(--br-color-primary-light)); }
   hr.br-color-secondary {
-    border-top-color: #ddf2bb; }
+    border-top-color: var(--bro-color-secondary-light, var(--br-color-secondary-light)); }
   hr.br-dashed {
     border-top-style: dashed; }
 
@@ -689,8 +628,8 @@ html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background-color: #fff;
-  font-size: 14px;
-  color: #555; }
+  font-size: var(--bro-font-basesize, var(--br-font-basesize));
+  color: var(--bro-color-charcoal, var(--br-color-charcoal)); }
 
 img {
   border: none;
@@ -708,9 +647,9 @@ img {
 input[type="text"],
 input[type="password"] {
   font-size: 1rem;
-  color: #999999;
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
   border: none;
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid var(--bro-color-ash-light, var(--br-color-ash-light));
   display: block;
   height: 2rem;
   padding: 0px;
@@ -720,8 +659,8 @@ input[type="password"] {
   input[type="text"]:focus,
   input[type="password"]:focus {
     outline: none;
-    border-bottom: 2px solid #3795FF;
-    color: #777; }
+    border-bottom: 2px solid var(--bro-color-primary, var(--br-color-primary));
+    color: var(--bro-color-charcoal-light, var(--br-color-charcoal-light)); }
 
 input[type="checkbox"] {
   margin: 0 7px; }
@@ -738,7 +677,7 @@ label {
   display: inline-block;
   margin: 0;
   text-align: left;
-  color: #0056b7;
+  color: var(--bro-color-primary-dark, var(--br-color-primary-dark));
   font-style: italic; }
   label.inline {
     display: inline-block;
@@ -748,13 +687,13 @@ legend {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 1.2rem;
-  color: #999999;
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
   position: relative;
   left: -10px;
   background-color: #fff; }
 
 a {
-  color: #3795FF; }
+  color: var(--bro-color-primary, var(--br-color-primary)); }
 
 ol, ul {
   line-height: 1.8rem;
@@ -771,28 +710,28 @@ ul li {
   list-style: disc; }
 
 .br-message {
-  background-color: #efefef;
-  color: #333;
+  background-color: var(--bro-color-ash-light, var(--br-color-ash-light));
+  color: var(--bro-color-charcoal-dark, var(--br-color-charcoal-dark));
   font-weight: 400;
   padding: 15px 20px;
   margin: 1rem 0;
   line-height: 1.7rem;
   position: relative; }
   .br-message.br-theme-charcoal {
-    color: #efefef;
-    background-color: #333; }
+    color: var(--bro-color-ash-light, var(--br-color-ash-light));
+    background-color: var(--bro-color-charcoal-dark, var(--br-color-charcoal-dark)); }
   .br-message.br-theme-primary {
-    color: #0056b7;
-    background-color: #b7d9ff; }
+    color: var(--bro-color-primary-dark, var(--br-color-primary-dark));
+    background-color: var(--bro-color-primary-light, var(--br-color-primary-light)); }
   .br-message.br-theme-secondary {
-    color: #66911c;
-    background-color: #ddf2bb; }
+    color: var(--bro-color-secondary-dark, var(--br-color-secondary-dark));
+    background-color: var(--bro-color-secondary-light, var(--br-color-secondary-light)); }
   .br-message.br-theme-info {
-    color: #d9b20c;
-    background-color: #fef9e6; }
+    color: var(--bro-color-info-dark, var(--br-color-info-dark));
+    background-color: var(--bro-color-info-light, var(--br-color-info-light)); }
   .br-message.br-theme-error {
-    color: #b92121;
-    background-color: #f9e0e0; }
+    color: var(--bro-color-warn-dark, var(--br-color-warn-dark));
+    background-color: var(--bro-color-warn-light, var(--br-color-warn-light)); }
 
 p {
   line-height: 2rem;
@@ -807,14 +746,14 @@ pre {
   padding: 20px;
   overflow: auto;
   background-color: transparent;
-  color: #777; }
+  color: var(--bro-color-charcoal-light, var(--br-color-charcoal-light)); }
 
 select {
-  color: #999999;
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark));
   display: block;
   position: relative;
   border: 1px solid transparent;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid var(--bro-color-ash, var(--br-color-ash));
   background-color: #fff;
   width: 100%;
   box-sizing: border-box;
@@ -830,9 +769,9 @@ table {
     vertical-align: top;
     line-height: 1.5rem; }
   table thead td, table thead th, table tfoot td, table tfoot th {
-    border-bottom: 3px solid #cccccc;
-    background-color: #efefef;
-    color: #777;
+    border-bottom: 3px solid var(--bro-color-ash, var(--br-color-ash));
+    background-color: var(--bro-color-ash-light, var(--br-color-ash-light));
+    color: var(--bro-color-charcoal-light, var(--br-color-charcoal-light));
     letter-spacing: 1px;
     font-size: .9rem;
     text-align: left;
@@ -842,27 +781,27 @@ table {
     font-family: "Roboto", sans-serif;
     font-weight: 400; }
   table tbody td, table tbody th {
-    border-bottom: 1px solid #efefef; }
+    border-bottom: 1px solid var(--bro-color-ash-light, var(--br-color-ash-light)); }
   table tbody th {
     letter-spacing: 1px;
     text-align: left;
     text-transform: uppercase; }
 
 table.br-theme-primary thead td, table.br-theme-primary thead th, table.br-theme-primary tfoot td, table.br-theme-primary tfoot th {
-  border-bottom: 3px solid #3795FF;
-  background-color: #b7d9ff;
-  color: #0056b7; }
+  border-bottom: 3px solid var(--bro-color-primary, var(--br-color-primary));
+  background-color: var(--bro-color-primary-light, var(--br-color-primary-light));
+  color: var(--bro-color-primary-dark, var(--br-color-primary-dark)); }
 
 table.br-theme-primary tbody td, table.br-theme-primary tbody th {
-  border-bottom: 1px solid #b7d9ff; }
+  border-bottom: 1px solid var(--bro-color-primary-light, var(--br-color-primary-light)); }
 
 table.br-theme-secondary thead td, table.br-theme-secondary thead th, table.br-theme-secondary tfoot td, table.br-theme-secondary tfoot th {
-  border-bottom: 3px solid #A9DD50;
-  background-color: #ddf2bb;
-  color: #66911c; }
+  border-bottom: 3px solid var(--bro-color-secondary, var(--br-color-secondary));
+  background-color: var(--bro-color-secondary-light, var(--br-color-secondary-light));
+  color: var(--bro-color-secondary-dark, var(--br-color-secondary-dark)); }
 
 table.br-theme-secondary tbody td, table.br-theme-secondary tbody th {
-  border-bottom: 1px solid #ddf2bb; }
+  border-bottom: 1px solid var(--bro-color-secondary-light, var(--br-color-secondary-light)); }
 
 textarea {
   width: 100%;
@@ -871,10 +810,10 @@ textarea {
   margin: .5rem 0 1rem;
   line-height: 1.4rem;
   resize: none;
-  border: 1px solid #efefef;
+  border: 1px solid var(--bro-color-ash-light, var(--br-color-ash-light));
   box-sizing: border-box;
-  color: #999999; }
+  color: var(--bro-color-ash-dark, var(--br-color-ash-dark)); }
   textarea:focus {
-    border-bottom: 2px solid #3795FF;
+    border-bottom: 2px solid var(--bro-color-primary, var(--br-color-primary));
     outline: none; }
 

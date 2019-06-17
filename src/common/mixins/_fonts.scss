@@ -18,8 +18,7 @@
 @mixin font_mono {
   font-family: $br_font_mono, monospace;
 }
-// This is generally unnecessary as the "br-icon-*" classes should be used instead
-// This mixin can be used to change the font for pseudo elements like ::after
+
 @mixin font_glyph {
   font-family: $br_font_glyph;
 }

@@ -1,13 +1,3 @@
 a {
   color: $br_color_primary;
-
-  &.br-link-external::after {
-    @include font_glyph;
-    content: '\f08e';
-    font-size: .8rem;
-    line-height: 1rem;
-    vertical-align: middle;
-    display: inline-block;
-    margin: 0 3px 0 4px;
-  }
 }

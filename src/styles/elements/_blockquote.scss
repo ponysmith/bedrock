@@ -9,7 +9,9 @@ blockquote {
 
   &::before {
     @include font_glyph;
-    content: '\f10d';
+    content: "\f10d";
+    font-weight: 900; // required by FA 5
+    display: inline-block;
     position: absolute;
     top: 5px;
     left: 5px;

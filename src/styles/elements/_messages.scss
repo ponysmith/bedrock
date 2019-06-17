@@ -1,58 +1,30 @@
 .br-message {
   background-color: $br_color_ash_light;
-  color: $br_color_charcoal_light;
-  padding: 10px 15px 10px 40px;
+  color: $br_color_charcoal_dark;
+  font-weight: 400;
+  padding: 15px 20px;
   margin: 1rem 0;
   line-height: 1.7rem;
   position: relative;
 
-  &::before {
-    @include font_glyph;
-    content: '';
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $br_color_charcoal_light;
-    background-color: $br_color_ash_dark;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 30px;
+  &.br-theme-charcoal {
+    color: $br_color_ash_light;
+    background-color: $br_color_charcoal_dark;
   }
-
   &.br-theme-primary {
     color: $br_color_primary_dark;
     background-color: $br_color_primary_light;
-    &::before {
-      background-color: $br_color_primary;
-    }
   }
   &.br-theme-secondary {
     color: $br_color_secondary_dark;
     background-color: $br_color_secondary_light;
-    &::before {
-      background-color: $br_color_secondary;
-    }
   }
   &.br-theme-info {
     color: $br_color_info_dark;
     background-color: $br_color_info_light;
-    &::before {
-      content: '\f129';
-      background-color: $br_color_info;
-      color: #fff;
-    }
   }
   &.br-theme-error {
     color: $br_color_warn_dark;
     background-color: $br_color_warn_light;
-    &::before {
-      content: '\f12a';
-      background-color: $br_color_warn;
-      color: #fff;
-    }
-
   }
 }

@@ -1,68 +1,80 @@
 // ====================================================================================
+// CSS Vars
+// ====================================================================================
+:root {
+  // Dimensions
+  --br-font-basesize: 14px;
+  // Colors
+  --br-color-ash: #cccccc;
+  --br-color-ash-light: #efefef;
+  --br-color-ash-dark: #999999;
+  --br-color-charcoal: #555;
+  --br-color-charcoal-light: #777;
+  --br-color-charcoal-dark: #333;
+  --br-color-primary: #3795FF;
+  --br-color-primary-dark: #{darken(#3795FF, 25%)};
+  --br-color-primary-light: #{lighten(#3795FF, 25%)};
+  --br-color-secondary: #A9DD50;
+  --br-color-secondary-dark: #{darken(#A9DD50, 25%)};
+  --br-color-secondary-light: #{lighten(#A9DD50, 25%)};
+  --br-color-info: #f7dd6d;
+  --br-color-info-light: #{lighten(#f7dd6d, 25%)};
+  --br-color-info-dark: #{darken(#f7dd6d, 25%)};
+  --br-color-warn: #e67474;
+  --br-color-warn-light: #{lighten(#e67474, 25%)};
+  --br-color-warn-dark: #{darken(#e67474, 25%)};
+}
+
+// ====================================================================================
 // SASS Vars
-// All the vars defined here are defined as defaults
-// These variables can be overridden on a per-app basis
 // ====================================================================================
 
+// Dimensions
+$br_width_fixed: 960px;
+$br_width_mobile: 768px;
 
-/**
- * Dimensions
- */
-$br_width_fixed: 960px !default;
-$br_width_mobile: 768px !default;
+// Fonts
+$br_font_basesize: var(--bro-font-basesize, var(--br-font-basesize));
+$br_font_sans: "Roboto";
+$br_font_serif: "Roboto Slab";
+$br_font_mono: "Roboto Mono";
+$br_font_glyph: "Font Awesome 5 Pro";
 
+// Containers
+$br_container_pad_top: 10px;
+$br_container_pad_right: 10px;
+$br_container_pad_bottom: 10px;
+$br_container_pad_left: 10px;
 
-/**
- * Fonts
- */
-$br_font_base: 14px !default;
-$br_font_sans: "Roboto" !default;
-$br_font_serif: "Roboto Slab" !default;
-$br_font_mono: "Roboto Mono" !default;
-$br_font_glyph: "Font Awesome";
-
-
-/**
- * Containers
- */
-$br_container_pad_top: 10px !default;
-$br_container_pad_right: 10px !default;
-$br_container_pad_bottom: 10px !default;
-$br_container_pad_left: 10px !default;
-
-/**
- * Grid
- */
-$br_grid_columns: 12 !default;
-$br_grid_gutter: 2 !default; // this refers to a percentage value i.e. 2 = 2% gutter width
+// Grid
+$br_grid_columns: 12;
+$br_grid_gutter: 2; // this refers to a percentage value i.e. 2 = 2% gutter width
 $br_grid_single_column_width: (100 - ($br_grid_columns - 1) * $br_grid_gutter) / $br_grid_columns;
 $br_grid_single_column_width_nogutter: 100 / $br_grid_columns;
 
-/**
- * Colors
- */
+// Colors
 // Ash
-$br_color_ash: #cccccc !default;
-$br_color_ash_dark: #999999 !default;
-$br_color_ash_light: #efefef !default;
+$br_color_ash: var(--bro-color-ash, var(--br-color-ash));
+$br_color_ash_dark: var(--bro-color-ash-dark, var(--br-color-ash-dark));
+$br_color_ash_light: var(--bro-color-ash-light, var(--br-color-ash-light));
 // Charcoal
-$br_color_charcoal: #444444 !default;
-$br_color_charcoal_dark: #222222 !default;
-$br_color_charcoal_light: #666666 !default;
+$br_color_charcoal: var(--bro-color-charcoal, var(--br-color-charcoal));
+$br_color_charcoal_dark: var(--bro-color-charcoal-dark, var(--br-color-charcoal-dark));
+$br_color_charcoal_light: var(--bro-color-charcoal-light, var(--br-color-charcoal-light));
 // Primary
-$br_color_primary: #3795FF !default;
-$br_color_primary_light: lighten($br_color_primary, 25%) !default;
-$br_color_primary_dark: darken($br_color_primary, 15%) !default;
+$br_color_primary: var(--bro-color-primary, var(--br-color-primary));
+$br_color_primary_light: var(--bro-color-primary-light, var(--br-color-primary-light));
+$br_color_primary_dark: var(--bro-color-primary-dark, var(--br-color-primary-dark));
 // Secondary
-$br_color_secondary: #A9DD50 !default;
-$br_color_secondary_light: lighten($br_color_secondary, 25%) !default;
-$br_color_secondary_dark: darken($br_color_secondary, 15%) !default;
+$br_color_secondary: var(--bro-color-secondary, var(--br-color-secondary));
+$br_color_secondary_light: var(--bro-color-secondary-light, var(--br-color-secondary-light));
+$br_color_secondary_dark: var(--bro-color-secondary-dark, var(--br-color-secondary-dark));
 // Info
-$br_color_info: #f7dd6d !default;
-$br_color_info_light: lighten($br_color_info, 25%) !default;
-$br_color_info_dark: darken($br_color_info, 15%) !default;
+$br_color_info: var(--bro-color-info, var(--br-color-info));
+$br_color_info_light: var(--bro-color-info-light, var(--br-color-info-light));
+$br_color_info_dark: var(--bro-color-info-dark, var(--br-color-info-dark));
 // Warn
-$br_color_warn: #e67474 !default;
-$br_color_warn_light: lighten($br_color_warn, 25%) !default;
-$br_color_warn_dark: darken($br_color_warn, 15%) !default;
+$br_color_warn: var(--bro-color-warn, var(--br-color-warn));
+$br_color_warn_light: var(--bro-color-warn-light, var(--br-color-warn-light));
+$br_color_warn_dark: var(--bro-color-warn-dark, var(--br-color-warn-dark));
 

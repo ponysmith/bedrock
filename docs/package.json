@@ -6,7 +6,8 @@
     "version": "3.8.0"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"npm run docs:watch\" \"npm run docs:server\"",
+    "start": "concurrently --kill-others \"npm run docs:clean && npm run docs:watch\" \"npm run docs:server\"",
+    "docs:clean": "hexo clean",
     "docs:server": "hexo server --static",
     "docs:watch": "hexo generate --watch"
   },

@@ -1,8 +1,6 @@
 //
 // The init file sets up any necessary variables, mixins, etc
 // This file is included in the core Bedrock styles and any core Bedrock components
-// Any overrides of variables by the user will automatically be handled by this file
-// Additionally, any external stylesheets configured for compilation in the Bedrock config can import this file to gain all the variables
 //
 
 // Custom var overrides
@@ -10,6 +8,4 @@
 // Default vars
 @import 'common/vars';
 // Mixins
-@import 'common/mixins/clearfix';
 @import 'common/mixins/fonts';
-@import 'common/mixins/animate/spin';
