@@ -1,8 +1,0 @@
-#
-# Config vars for Gulp tasks
-# If the config.yml file does not exist, it is automatically copied from config.yml.sample
-#
-
-css_dest: dist
-css_basename: bedrock
-css_version_hash_length: 10
