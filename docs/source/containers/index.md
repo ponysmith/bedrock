@@ -5,7 +5,7 @@ title: Containers
 Bedrock has a basic container system to aid in layout. There are two container types. Note that in the examples below, an additional background color added to make them more visible. Normally, the containers have no background color.
 
 <div class="br-message br-theme-secondary">
-  The examples below have had a border added to make them easier to see. The Bedrock container has no borders by default.
+  Some styling has been added to the examples below to make them easier to see (e.g. background color and padding); normally containers have no such styling.
 </div>
 
 ## Full-width Container

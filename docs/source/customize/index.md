@@ -32,7 +32,7 @@ In addition to overriding **Bedrock** defaults, you can also leverage the defaul
 
 {% codeblock lang:css %}
 #leftnav {
-  background-color: --br-color-secondary;
+  background-color: var(--br-color-secondary);
 }
 {% endcodeblock %}
 

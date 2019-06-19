@@ -8,7 +8,7 @@ Bedrock includes a basic grid. The grid uses twelve columns, meaning that the co
 The grid system is reponsive and will collapse to a single column display when the viewport drops beneath the mobile width defined in the `$br_width_mobile` variable.
 
 <div class="br-message br-theme-secondary">
-  The examples below have had a border added to make them easier to see. The Bedrock grid has no borders by default.
+  Some styling has been added to the examples below to make them easier to see (e.g. background color and padding); normally the grid has no such styling.
 </div>
 
 ## Normal grid
