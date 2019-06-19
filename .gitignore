@@ -1,12 +1,2 @@
 node_modules
 .DS_Store
-
-# config
-config.yml
-
-# dist files
-dist/*
-!dist/.gitkeep
-
-# SASS variable overrides
-src/overrides.scss
