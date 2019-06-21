@@ -47,15 +47,15 @@ If you don't include the fonts from Google Fonts, your site will still function 
 ```
 
 ## Local Development
-If you would like to work on **Bedrock** locally, use the instructions below to run the **Bedrock** build locally.
+If you would like to work on **Bedrock** locally, use the instructions below to run the **Bedrock** build script and the [Hexo](https://hexo.io/) documentation site locally.
 
 ### Clone repo
 ```bash
 git clone git@github.com:ponysmith/bedrock.git
 ```
 
-### Launch Bedrock
-Install dependencies and run Webpack to watch the files and rebuild **Bedrock** on changes:
+### Install dependencies
+> You will need to install dependencies for both the **Bedrock** Webpack script and the Hexo site:
 
 ```bash
 # Install dependencies
@@ -63,20 +63,28 @@ cd /path/to/bedrock
 npm install
 
 # Run Webpack
-npm run start
-```
-
-### Launch the docs site
-**Bedrock** includes a documentation site with examples. The site is built using [Hexo](https://hexo.io/). You can run the documentation site locally to see and test changes you make to the **Bedrock** CSS.
-
-> Running Webpack in dev mode (as mentioned above), will automatically compile the CSS and place the updated compiled CSS file into the appropriate location to load it into the docs site.
-
-The documentation site exist in the `/docs` folder of the repository. To launch the site:
-
-```bash
 cd /path/to/bedrock/docs
 npm install
+```
+
+### Start Webpack and run the documentation site
+Once dependencies are installed, you can run the Webpack build process (in watch mode) and launch the documentation site by running `npm run start` from the root **Bedrock** directory:
+
+```
+cd /path/to/bedrock
 npm run start
 ```
 
-> Since the docs site is a Hexo site, you can also use any Hexo commands from within the `/docs` directory.
+After running the above command, you can open the Documentation site at http://localhost:4000
+
+> Running `npm run start` as above will run Webpack in watch mode; the script will recompile **Bedrock** files when changes are detected and place the new compiled CSS file in the appropriate location to be loaded into the Documentation site.
+
+## Build for production
+To build a new version of **Bedrock** for production, run `npm run build` from the **Bedrock** root directory:
+
+```
+cd /path/to/bedrock
+npm run build
+```
+
+The new compiled and minified file will be saved to the `/dist` directory within the **Bedrock** project.
