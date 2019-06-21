@@ -710,28 +710,37 @@ ul li {
   list-style: disc; }
 
 .br-message {
-  background-color: var(--bro-color-ash-light, var(--br-color-ash-light));
-  color: var(--bro-color-charcoal-dark, var(--br-color-charcoal-dark));
+  color: var(--bro-color-charcoal, var(--br-color-charcoal));
   font-weight: 400;
   padding: 15px 20px;
   margin: 1rem 0;
   line-height: 1.7rem;
-  position: relative; }
+  position: relative;
+  border-left: 6px solid var(--bro-color-ash-light, var(--br-color-ash-light)); }
+  .br-message.br-theme-ash {
+    color: var(--bro-color-charcoal-light, var(--br-color-charcoal-light));
+    background-color: var(--bro-color-ash-light, var(--br-color-ash-light));
+    border-left-color: var(--bro-color-ash, var(--br-color-ash)); }
   .br-message.br-theme-charcoal {
     color: var(--bro-color-ash-light, var(--br-color-ash-light));
-    background-color: var(--bro-color-charcoal-dark, var(--br-color-charcoal-dark)); }
+    background-color: var(--bro-color-charcoal, var(--br-color-charcoal));
+    border-left-color: var(--bro-color-charcoal-dark, var(--br-color-charcoal-dark)); }
   .br-message.br-theme-primary {
     color: var(--bro-color-primary-dark, var(--br-color-primary-dark));
-    background-color: var(--bro-color-primary-light, var(--br-color-primary-light)); }
+    background-color: var(--bro-color-primary-light, var(--br-color-primary-light));
+    border-left-color: var(--bro-color-primary, var(--br-color-primary)); }
   .br-message.br-theme-secondary {
     color: var(--bro-color-secondary-dark, var(--br-color-secondary-dark));
-    background-color: var(--bro-color-secondary-light, var(--br-color-secondary-light)); }
+    background-color: var(--bro-color-secondary-light, var(--br-color-secondary-light));
+    border-left-color: var(--bro-color-secondary, var(--br-color-secondary)); }
   .br-message.br-theme-info {
     color: var(--bro-color-info-dark, var(--br-color-info-dark));
-    background-color: var(--bro-color-info-light, var(--br-color-info-light)); }
+    background-color: var(--bro-color-info-light, var(--br-color-info-light));
+    border-left-color: var(--bro-color-info, var(--br-color-info)); }
   .br-message.br-theme-error {
     color: var(--bro-color-warn-dark, var(--br-color-warn-dark));
-    background-color: var(--bro-color-warn-light, var(--br-color-warn-light)); }
+    background-color: var(--bro-color-warn-light, var(--br-color-warn-light));
+    border-left-color: var(--bro-color-warn, var(--br-color-warn)); }
 
 p {
   line-height: 2rem;

@@ -5,7 +5,7 @@ title: Typography
 Bedrock includes default styling for all typographic elements. 
 
 ## Font sizing
-Bedrock uses `rem` units to size all typographic elements. This means that global font sizing can be adjusted by changing the root font size. You can update the root font size with the `--br-font-size` CSS variable. Learn more about CSS overrides in Bedrock on the [Overrides](/overrides) page.
+Bedrock uses `rem` units to size all typographic elements. This means that global font sizing can be adjusted by changing the root font size. You can update the root font size with the `--bro-font-size` CSS variable. Learn more about CSS overrides in Bedrock on the [Customize](/customize) page.
 
 
 ## Headers

@@ -4,7 +4,8 @@
   "description": "Bedrock",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run docs:watch\" \"npm run docs:server\" \"npm run build:dev\"",
+    "start": "npm run docs:clean && concurrently --kill-others \"npm run docs:watch\" \"npm run docs:server\" \"npm run build:dev\"",
+    "docs:clean": "hexo clean --cwd docs",
     "docs:server": "hexo server --static --cwd docs",
     "docs:watch": "hexo generate --watch --cwd docs",
     "build:dev": "webpack --config webpack.dev.js",
