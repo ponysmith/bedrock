@@ -6,20 +6,17 @@
   --br-font-basesize: 14px;
   // Colors
   --br-color-ash: #cccccc;
-  --br-color-ash-light: #efefef;
+  --br-color-ash-light: #eeeeee;
   --br-color-ash-dark: #999999;
-  --br-color-charcoal: #555;
-  --br-color-charcoal-light: #777;
-  --br-color-charcoal-dark: #333;
+  --br-color-charcoal: #666;
+  --br-color-charcoal-light: #888;
+  --br-color-charcoal-dark: #444;
   --br-color-primary: #3795FF;
   --br-color-primary-dark: #{darken(#3795FF, 25%)};
   --br-color-primary-light: #{lighten(#3795FF, 25%)};
   --br-color-secondary: #A9DD50;
   --br-color-secondary-dark: #{darken(#A9DD50, 25%)};
   --br-color-secondary-light: #{lighten(#A9DD50, 25%)};
-  --br-color-info: #f7dd6d;
-  --br-color-info-light: #{lighten(#f7dd6d, 25%)};
-  --br-color-info-dark: #{darken(#f7dd6d, 25%)};
   --br-color-warn: #e67474;
   --br-color-warn-light: #{lighten(#e67474, 25%)};
   --br-color-warn-dark: #{darken(#e67474, 25%)};
@@ -69,10 +66,6 @@ $br_color_primary_dark: var(--bro-color-primary-dark, var(--br-color-primary-dar
 $br_color_secondary: var(--bro-color-secondary, var(--br-color-secondary));
 $br_color_secondary_light: var(--bro-color-secondary-light, var(--br-color-secondary-light));
 $br_color_secondary_dark: var(--bro-color-secondary-dark, var(--br-color-secondary-dark));
-// Info
-$br_color_info: var(--bro-color-info, var(--br-color-info));
-$br_color_info_light: var(--bro-color-info-light, var(--br-color-info-light));
-$br_color_info_dark: var(--bro-color-info-dark, var(--br-color-info-dark));
 // Warn
 $br_color_warn: var(--bro-color-warn, var(--br-color-warn));
 $br_color_warn_light: var(--bro-color-warn-light, var(--br-color-warn-light));

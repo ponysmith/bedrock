@@ -1,10 +1,12 @@
 label {
   @include font_sans;
   display: inline-block;
-  margin: 0;
+  margin: 0 15px 0 0;
   text-align: left;
-  color: $br_color_primary_dark;
-  font-style: italic;;
+  color: $br_color_charcoal_light;
+  font-style: italic;
+  font-size: .8rem;
+  text-transform: uppercase;
 
   &.inline {
     display: inline-block;
