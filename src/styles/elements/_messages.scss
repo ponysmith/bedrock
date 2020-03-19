@@ -6,60 +6,36 @@
   line-height: 1.7rem;
   position: relative;
   background-color: #fff;
-  border-radius: 6px 0 0 6px;
+  border-radius: 3px;
   border: 1px solid $br_color_ash_light;
   
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 15px;
-    background-color: $br_color_ash_light;
-    border-radius: 6px 0 0 6px;
-  }
-
   &.br-theme-ash {
     color: $br_color_charcoal_light;
     background-color: $br_color_ash_light;
     border: 1px solid $br_color_ash;
-    &::before {
-      background-color: $br_color_ash;
-    }
   }
 
   &.br-theme-charcoal {
     color: $br_color_ash_light;
     background-color: $br_color_charcoal_light;
-    &::before {
-      background-color: $br_color_charcoal;
-    }
+    border: 1px solid $br_color_charcoal;
   }
 
   &.br-theme-primary {
     color: $br_color_primary_dark;
     background-color: $br_color_primary_light;
-    &::before {
-      background-color: $br_color_primary;
-    }
+    border: 1px solid $br_color_primary;
   }
 
   &.br-theme-secondary {
     color: $br_color_secondary_dark;
     background-color: $br_color_secondary_light;
-    &::before {
-      background-color: $br_color_secondary;
-    }
+    border: 1px solid $br_color_secondary;
   }
 
   &.br-theme-error {
     color: $br_color_warn_dark;
     background-color: $br_color_warn_light;
-    &::before {
-      background-color: $br_color_warn;
-    }
+    border: 1px solid $br_color_warn;
   }
 }

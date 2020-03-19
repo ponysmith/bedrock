@@ -2,14 +2,15 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
   font-size: .9rem;
-  color: $br_color_ash_dark;
+  color: $br_color_charcoal_light;
   border: none;
-  border-bottom: 1px solid $br_color_ash_light;
+  border-bottom: 2px solid $br_color_ash_light;
   display: block;
-  padding: 5px 0px;
+  padding: .5rem 0px;
   width: 100%;
-  margin: 5px 0 1rem;
+  margin: 0 0 1rem;
   box-sizing: border-box;
+  height: 2.5rem;
 
   &::placeholder {
     color: $br_color_ash_dark;
@@ -19,7 +20,7 @@ input[type="password"] {
   &:focus {
     outline: none;
     color: $br_color_charcoal;
-    border-bottom-color: $br_color_charcoal;
+    border-bottom-color: $br_color_ash;
   }
 
   &.br-theme-primary {
@@ -36,7 +37,7 @@ input[type="password"] {
 
   &.br-theme-error {
     color: $br_color_warn;
-    border-bottom: 1px solid $br_color_warn;
+    border-bottom: 2px solid $br_color_warn;
     &:focus {
       color: $br_color_warn_dark;
     }
@@ -51,65 +52,10 @@ input[type="password"] {
 }
 
 input[type="checkbox"] {
-  @include appearance_none;
   margin: 0 5px;
-  height: .8rem;
-  width: .8rem;
-  line-height: 1rem;
-  vertical-align: middle;
-  border: 1px solid $br_color_ash_dark;
-
-  &:checked {
-    background-color: $br_color_ash_dark;
-  }
-
-  &.br-theme-primary {
-    border-color: $br_color_primary;
-    &:checked { background-color: $br_color_primary; }
-  }
-
-  &.br-theme-secondary {
-    border-color: $br_color_secondary;
-    &:checked { background-color: $br_color_secondary; }
-  }
-
-  &:disabled {
-    background-color: transparent;
-    border-color: $br_color_ash;
-    color: $br_color_ash;
-    cursor: not-allowed;
-  }
 }
 
 
 input[type="radio"] {
-  @include appearance_none;
   margin: 0 5px;
-  height: .8rem;
-  width: .8rem;
-  line-height: 1rem;
-  vertical-align: middle;
-  border-radius: .4rem;
-  border: 1px solid $br_color_ash_dark;
-
-  &:checked {
-    background-color: $br_color_ash_dark;
-  }
-
-  &.br-theme-primary {
-    border-color: $br_color_primary;
-    &:checked { background-color: $br_color_primary; }
-  }
-
-  &.br-theme-secondary {
-    border-color: $br_color_secondary;
-    &:checked { background-color: $br_color_secondary; }
-  }
-
-  &:disabled {
-    background-color: transparent;
-    border-color: $br_color_ash;
-    color: $br_color_ash;
-    cursor: not-allowed;
-  }
 }

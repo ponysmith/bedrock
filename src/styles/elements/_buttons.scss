@@ -21,7 +21,7 @@
     color: $br_color_ash_light;
   }
 
-  &.br-color-primary {
+  &.br-theme-primary {
     background-color: $br_color_primary_light;
     color: $br_color_primary_dark;
     &:hover, &:focus {
@@ -30,7 +30,7 @@
     }
   }
 
-  &.br-color-secondary {
+  &.br-theme-secondary {
     background-color: $br_color_secondary_light;
     color: $br_color_secondary_dark;
     &:hover, &:focus {

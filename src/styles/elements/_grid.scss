@@ -26,7 +26,7 @@
     }
     @for $i from 1 through $br_grid_columns {
       .br-col-#{$i} {
-        flex: 0 0 percentage(($i * $br_grid_single_column_width_nogutter) / 100); 
+        width: 0 0 percentage(($i * $br_grid_single_column_width_nogutter) / 100); 
       }
     }
   }
@@ -42,7 +42,7 @@
     }
     @for $i from 1 through $br_grid_columns {
       .br-col-#{$i} {
-        flex: percentage((($i * $br_grid_single_column_width) + (($i - 1) * $br_grid_gutter)) / 100);
+        width: percentage((($i * $br_grid_single_column_width) + (($i - 1) * $br_grid_gutter)) / 100);
       }
     }
   }
